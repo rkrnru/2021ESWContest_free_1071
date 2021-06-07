@@ -1,0 +1,11 @@
+{
+	"x": 0.3126,
+	"y": 0.2128,
+	"ct": 153,
+	"bri": 155,
+	"goalLux": 100,
+	"currentLux": 103.92156862745098,
+	"chlorophyll": "B",
+	"lightStateShouldBe": true,
+	"allowingOfAUser": true
+}
