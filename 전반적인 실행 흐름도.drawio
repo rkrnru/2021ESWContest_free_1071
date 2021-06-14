@@ -1,14 +1,14 @@
-<mxfile host="app.diagrams.net" modified="2021-06-14T21:41:23.308Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.77 Safari/537.36" etag="kwXhD3NidT-Ld4L6wWqA" version="14.7.7" type="github">
+<mxfile host="app.diagrams.net" modified="2021-06-14T21:54:19.592Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.77 Safari/537.36" etag="RF8VkdoPera5RPJWDjJz" version="14.7.7" type="github">
   <diagram id="tnWqJX780dG6p6c5vF5_" name="Page-1">
-    <mxGraphModel dx="1303" dy="780" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="782" dy="486" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
         <mxCell id="v2xxQM3PYK4Z-_NolJKh-1" value="전반적인 실행 흐름도" style="swimlane;fontSize=15;startSize=34;" parent="1" vertex="1">
-          <mxGeometry width="780" height="1280" as="geometry" />
+          <mxGeometry x="27" width="800" height="1280" as="geometry" />
         </mxCell>
         <mxCell id="v2xxQM3PYK4Z-_NolJKh-11" value="Apache Server" style="swimlane;fontSize=14;startSize=30;spacing=2;" parent="v2xxQM3PYK4Z-_NolJKh-1" vertex="1">
-          <mxGeometry x="260" y="34" width="260" height="1246" as="geometry" />
+          <mxGeometry x="280" y="34" width="260" height="1246" as="geometry" />
         </mxCell>
         <mxCell id="v2xxQM3PYK4Z-_NolJKh-12" value="&lt;p style=&quot;line-height: 150%&quot;&gt;부팅 시 자동 실행, CGI 허용.&lt;/p&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;spacing=2;" parent="v2xxQM3PYK4Z-_NolJKh-11" vertex="1">
           <mxGeometry x="50" y="50" width="160" height="60" as="geometry" />
@@ -65,13 +65,13 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="v2xxQM3PYK4Z-_NolJKh-7" value="Python" style="swimlane;startSize=30;fontSize=14;" parent="v2xxQM3PYK4Z-_NolJKh-1" vertex="1">
-          <mxGeometry y="34" width="260" height="1246" as="geometry" />
+          <mxGeometry y="34" width="280" height="1246" as="geometry" />
         </mxCell>
         <mxCell id="v2xxQM3PYK4Z-_NolJKh-10" value="main.py 실행" style="rounded=1;whiteSpace=wrap;html=1;" parent="v2xxQM3PYK4Z-_NolJKh-7" vertex="1">
-          <mxGeometry x="50" y="50" width="160" height="60" as="geometry" />
+          <mxGeometry x="63" y="50" width="160" height="60" as="geometry" />
         </mxCell>
         <mxCell id="v2xxQM3PYK4Z-_NolJKh-13" value="&lt;p style=&quot;line-height: 140%&quot;&gt;findIP() 실행, Bridge의 IP 주소 탐색.&lt;br&gt;&lt;/p&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;" parent="v2xxQM3PYK4Z-_NolJKh-7" vertex="1">
-          <mxGeometry x="50" y="150" width="160" height="70" as="geometry" />
+          <mxGeometry x="63" y="150" width="160" height="70" as="geometry" />
         </mxCell>
         <mxCell id="v2xxQM3PYK4Z-_NolJKh-14" value="" style="endArrow=classic;html=1;fontSize=12;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="v2xxQM3PYK4Z-_NolJKh-7" source="v2xxQM3PYK4Z-_NolJKh-10" target="v2xxQM3PYK4Z-_NolJKh-13" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
@@ -79,20 +79,20 @@
             <mxPoint x="230" y="79" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="teTgMuj66uehlwTVFIN7-2" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="v2xxQM3PYK4Z-_NolJKh-7" source="v2xxQM3PYK4Z-_NolJKh-13" edge="1">
+        <mxCell id="teTgMuj66uehlwTVFIN7-2" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="v2xxQM3PYK4Z-_NolJKh-7" source="v2xxQM3PYK4Z-_NolJKh-13" edge="1" target="teTgMuj66uehlwTVFIN7-5">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="180" y="209" as="sourcePoint" />
             <mxPoint x="130" y="268.9999999999999" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="teTgMuj66uehlwTVFIN7-5" value="&lt;p style=&quot;line-height: 140%&quot;&gt;autoCheck() 실행, 데이터를 측정&lt;/p&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="v2xxQM3PYK4Z-_NolJKh-7" vertex="1">
-          <mxGeometry x="50" y="268" width="160" height="71" as="geometry" />
+          <mxGeometry x="62" y="268" width="160" height="71" as="geometry" />
         </mxCell>
         <mxCell id="teTgMuj66uehlwTVFIN7-7" value="&lt;p style=&quot;line-height: 140%&quot;&gt;측정 값을 lightSetting과 waterSetting에 저장&lt;/p&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="v2xxQM3PYK4Z-_NolJKh-7" vertex="1">
-          <mxGeometry x="50" y="390" width="160" height="71" as="geometry" />
+          <mxGeometry x="62" y="390" width="160" height="71" as="geometry" />
         </mxCell>
         <mxCell id="teTgMuj66uehlwTVFIN7-9" value="&lt;p style=&quot;line-height: 140%&quot;&gt;측정된 Lux에 따라 전구 밝기 decrease 또는 increase&lt;/p&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="v2xxQM3PYK4Z-_NolJKh-7" vertex="1">
-          <mxGeometry x="49" y="521" width="160" height="71" as="geometry" />
+          <mxGeometry x="62" y="521" width="160" height="71" as="geometry" />
         </mxCell>
         <mxCell id="teTgMuj66uehlwTVFIN7-10" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="v2xxQM3PYK4Z-_NolJKh-7" source="teTgMuj66uehlwTVFIN7-7" target="teTgMuj66uehlwTVFIN7-9" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
@@ -101,7 +101,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="teTgMuj66uehlwTVFIN7-11" value="&lt;p style=&quot;line-height: 140%&quot;&gt;측정된 습도에 따라 펌프 ON 또는 OFF&lt;/p&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="v2xxQM3PYK4Z-_NolJKh-7" vertex="1">
-          <mxGeometry x="49" y="643.5" width="160" height="71" as="geometry" />
+          <mxGeometry x="62" y="643.5" width="160" height="71" as="geometry" />
         </mxCell>
         <mxCell id="teTgMuj66uehlwTVFIN7-12" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="v2xxQM3PYK4Z-_NolJKh-7" source="teTgMuj66uehlwTVFIN7-9" target="teTgMuj66uehlwTVFIN7-11" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
@@ -116,7 +116,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="teTgMuj66uehlwTVFIN7-15" value="바뀐 동작 상태를 서버에 저장" style="rounded=1;whiteSpace=wrap;html=1;" parent="v2xxQM3PYK4Z-_NolJKh-7" vertex="1">
-          <mxGeometry x="49" y="765" width="160" height="71" as="geometry" />
+          <mxGeometry x="62" y="765" width="160" height="71" as="geometry" />
         </mxCell>
         <mxCell id="teTgMuj66uehlwTVFIN7-16" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="v2xxQM3PYK4Z-_NolJKh-7" source="teTgMuj66uehlwTVFIN7-11" target="teTgMuj66uehlwTVFIN7-15" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
@@ -125,7 +125,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="N0FYi-gbG7OxnuEO2crS-16" value="서버에서 JSON 파일을 읽어와 습도, 조명 설정 업데이트" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="v2xxQM3PYK4Z-_NolJKh-7">
-          <mxGeometry x="50" y="1133" width="160" height="71" as="geometry" />
+          <mxGeometry x="62" y="1133" width="160" height="71" as="geometry" />
         </mxCell>
         <mxCell id="N0FYi-gbG7OxnuEO2crS-17" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="v2xxQM3PYK4Z-_NolJKh-7" source="teTgMuj66uehlwTVFIN7-15" target="N0FYi-gbG7OxnuEO2crS-16">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
@@ -133,18 +133,18 @@
             <mxPoint x="370" y="926" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="N0FYi-gbG7OxnuEO2crS-24" value="" style="endArrow=classic;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="v2xxQM3PYK4Z-_NolJKh-7" source="N0FYi-gbG7OxnuEO2crS-16" target="teTgMuj66uehlwTVFIN7-5">
+        <mxCell id="N0FYi-gbG7OxnuEO2crS-24" value="" style="endArrow=classic;html=1;" edge="1" parent="v2xxQM3PYK4Z-_NolJKh-7">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="210" y="1206" as="sourcePoint" />
-            <mxPoint x="260" y="1156" as="targetPoint" />
+            <mxPoint x="63" y="1168" as="sourcePoint" />
+            <mxPoint x="63" y="303" as="targetPoint" />
             <Array as="points">
-              <mxPoint x="20" y="1168" />
-              <mxPoint x="20" y="304" />
+              <mxPoint x="32" y="1168" />
+              <mxPoint x="32" y="304" />
             </Array>
           </mxGeometry>
         </mxCell>
         <mxCell id="v2xxQM3PYK4Z-_NolJKh-8" value="Android" style="swimlane;startSize=30;fontSize=14;" parent="v2xxQM3PYK4Z-_NolJKh-1" vertex="1">
-          <mxGeometry x="520" y="34" width="260" height="1246" as="geometry" />
+          <mxGeometry x="540" y="34" width="260" height="1246" as="geometry" />
         </mxCell>
         <mxCell id="v2xxQM3PYK4Z-_NolJKh-15" value="마지막 데이터를 기준으로 UI 그리기" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;" parent="v2xxQM3PYK4Z-_NolJKh-8" vertex="1">
           <mxGeometry x="50" y="49.5" width="150" height="60.5" as="geometry" />
@@ -194,7 +194,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="N0FYi-gbG7OxnuEO2crS-13" value="HTTP GET with Parameter" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;labelBackgroundColor=#FFFFFF;" vertex="1" parent="v2xxQM3PYK4Z-_NolJKh-1">
-          <mxGeometry x="490" y="1192" width="60" height="20" as="geometry" />
+          <mxGeometry x="512" y="1192" width="60" height="20" as="geometry" />
         </mxCell>
         <mxCell id="N0FYi-gbG7OxnuEO2crS-14" value="" style="endArrow=none;startArrow=classic;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="v2xxQM3PYK4Z-_NolJKh-1" source="N0FYi-gbG7OxnuEO2crS-11" target="N0FYi-gbG7OxnuEO2crS-13">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
@@ -209,20 +209,20 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="N0FYi-gbG7OxnuEO2crS-3" value="HTTP GET Request" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#FFFFFF;labelBackgroundColor=#FFFFFF;" vertex="1" parent="1">
-          <mxGeometry x="500" y="943" width="40" height="24" as="geometry" />
+          <mxGeometry x="549" y="943" width="40" height="24" as="geometry" />
         </mxCell>
         <mxCell id="N0FYi-gbG7OxnuEO2crS-20" value="" style="endArrow=classic;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="N0FYi-gbG7OxnuEO2crS-9">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="570" y="1070" as="sourcePoint" />
-            <mxPoint x="721" y="110" as="targetPoint" />
+            <mxPoint x="760" y="1202.0000000000005" as="sourcePoint" />
+            <mxPoint x="769" y="110" as="targetPoint" />
             <Array as="points">
-              <mxPoint x="750" y="1202" />
-              <mxPoint x="750" y="110" />
+              <mxPoint x="800" y="1202" />
+              <mxPoint x="800" y="110" />
             </Array>
           </mxGeometry>
         </mxCell>
         <mxCell id="N0FYi-gbG7OxnuEO2crS-23" value="File I/O" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;labelBackgroundColor=#FFFFFF;" vertex="1" parent="1">
-          <mxGeometry x="230" y="1190" width="60" height="20" as="geometry" />
+          <mxGeometry x="275" y="1192" width="60" height="20" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
