@@ -1,1 +1,63 @@
-<mxfile host="app.diagrams.net" modified="2021-06-17T09:43:16.588Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.101 Safari/537.36" etag="6TPwpfHV5nV4Uqfz-p4F" version="14.7.8" type="github"><diagram id="-KNmO2IvdMZ4jYOVN25r" name="Page-1">5Vltk5s2EP41mmkzkxvejKWPgO2LO5fUqa+TTr5xoAMaQC6W63N+fXeFMNhgj9PJ3cWTL2fxrF7QPs+uVhyxg+LptgpX6XsR85xYRvxE7AmxLNM0KPwgsqsRl2ogqbJYd2qBZfaVa9DQ6CaL+fqgoxQil9nqEIxEWfJIHmBhVYntYbdHkR+uugoT3gOWUZj30U9ZLNMapda4xd/xLEmblU2X1ZYibDrrnazTMBbbDmRPiR1UQsi6VTwFPEfnNX6px81OWPcvVvFSXjLgIbbuos/s0fz6/ou5yO6Xs/u/3+pZ/g3zjd7wYidTUQK2qERShQW0ZrnYRmlYSb0RuWu8s95mRR6W8OQ/ilJq+kwXntcSBmhgZCCwCqOsTO7FCpAO4AspRaGx/qaaN+SV5E8dSG/ylouCy2oHXbTV0f7Wgmvcv23Zc6nG0i5ztq3RUEsm2U/dehUa2rHf4GS752RiubnUTjvwqPvPRjSGt2vlPQ86mNbqqTVCK1G/0wlhDqEOmfrEMwkLyNQj/pj4FBE2JR4Em0GmAaG+sgYIMrNZHnZTv4Ge75jeSmzKmOPWTDBv00zyJZCG1i2EO2CpLHJtPhZAn8qzCvy//Jpmn2DLGCB4/Fz0Oj16b7mcL24eszKeL375lVgwr+FDeoNUgxQAa8jLfKHJ8WziK3KoS2igwAmhNmE1dTah7PtRY70cNUOxN0gNfS5qRv3Ig8DwGWF+lwnlZkeFjYd/fUNF1Ahpqa0AQoAhVwZhIxV4I2xbqie0adOT2Xo49TA44SC4UxYPYVgQJ7OI79SqUEy7OBMOdVVs1q8D/Udqmhm+2uBbdEP71OLvTixezwfJo7tn2BVT465QbLbzgmIrxceEpdON+DT/8Je/4HT8MRk4SxVVZkPJaSI1P5Zq2K3qwIrJXUnBC1qhek5nrJLxfmYcYuhE7zVCZbSriRx9seRSwuH7s6jDcV9bHdagOi4J82F1AOdTzDr7GuA7qWMbSl79ZOoY0ddWR7+GCDdSRCmPvjQFBJ4jwZmUvq8B2/Ms0A0N7nV0KIqBU2WCB6Tq8OasFPDss7Xgmin/XMUgoavUAX3JgmVQB/2CpeJhrDmYZTnXaqjr94eqvQo0RGN9Y6ljo61vflv+/qFJGoFKGspW64ONsdDEnQ9OamOY6+pCpYiafG/STNLICFIKrTOJhavas74EUlE8bNY/LP1j47XpdwcPiWO/+0jYcUz7ilqjmwbOx24TqTeniw11LEFab++NRifjBxj41LjgWLpwnq6efPW6KsOAidWT+NjzKhLLXiI/jLRYT1pZGUFyWfM7XH1eSl6uM7k7mWAO700tTa7mDgtdsykpAi04MF1hImCvf5c4cZk4jNG9j3U8eTqlQze8y15lTj6OnBflYnAL/cq9CLPyZrXrOfPCz6HO83zpHPcdNfyl86yr9Gp/8EiGZQI7+4bl2MBqztFaYQ73ixLOHR/z9rrHzn6bQ4TBY/vBvO7e/tvBnv4H</diagram></mxfile>
+<mxfile host="app.diagrams.net" modified="2021-06-17T10:08:47.148Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.101 Safari/537.36" etag="bhNStGdcKDJH2YFJ-7w-" version="14.7.8" type="github">
+  <diagram id="-KNmO2IvdMZ4jYOVN25r" name="Page-1">
+    <mxGraphModel dx="950" dy="590" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="bd2LcZ9f1zMk1PiTSFTj-1" value="Python Program Flowchart" style="swimlane;fontSize=16;startSize=50;spacingTop=0;spacingBottom=0;" parent="1" vertex="1">
+          <mxGeometry x="40" y="20" width="760" height="1740" as="geometry" />
+        </mxCell>
+        <mxCell id="bd2LcZ9f1zMk1PiTSFTj-3" value="&lt;font style=&quot;font-size: 12px&quot;&gt;프로그램 시작&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=16;" parent="bd2LcZ9f1zMk1PiTSFTj-1" vertex="1">
+          <mxGeometry x="40" y="110" width="200" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="bd2LcZ9f1zMk1PiTSFTj-4" value="GetIP.findIP(), Bridge의 IP 주소 탐색" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;" parent="bd2LcZ9f1zMk1PiTSFTj-1" vertex="1">
+          <mxGeometry x="40" y="220" width="200" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="bd2LcZ9f1zMk1PiTSFTj-5" value="빛의 세기를 측정할 때 쓰는 mL 객체, 토양 습도 측정 시 쓰는 mH 객체 초기화" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;" parent="bd2LcZ9f1zMk1PiTSFTj-1" vertex="1">
+          <mxGeometry x="40" y="340" width="200" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="noQg9hEuoWINXBPe87Qg-1" value="조도 측정값과 전구 설정을 저장하는 lightSetting 객체 초기화" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;" parent="bd2LcZ9f1zMk1PiTSFTj-1" vertex="1">
+          <mxGeometry x="40" y="460" width="200" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="noQg9hEuoWINXBPe87Qg-2" value="습도 측정값과 펌프 설정을 저장하는 waterSetting 객체 초기화" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;" parent="bd2LcZ9f1zMk1PiTSFTj-1" vertex="1">
+          <mxGeometry x="40" y="580" width="200" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="noQg9hEuoWINXBPe87Qg-4" value="autocheck(), mL, mH 객체로 센서 값을 측정 후 *Setting 객체들을 Update" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;" parent="bd2LcZ9f1zMk1PiTSFTj-1" vertex="1">
+          <mxGeometry x="40" y="820" width="200" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="noQg9hEuoWINXBPe87Qg-5" value="readSettingFile(),&lt;br&gt;서버의 JSON 파일에 &lt;br&gt;새 요청이 있나?" style="rhombus;whiteSpace=wrap;html=1;fontSize=12;" parent="bd2LcZ9f1zMk1PiTSFTj-1" vertex="1">
+          <mxGeometry x="40" y="700" width="200" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="noQg9hEuoWINXBPe87Qg-6" value="요청된 값대로 *Setting 객체 Update. 전구 동작 기준과 펌프 동작 기준이 바뀐다" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;" parent="bd2LcZ9f1zMk1PiTSFTj-1" vertex="1">
+          <mxGeometry x="280" y="700" width="200" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="noQg9hEuoWINXBPe87Qg-9" value="빛이 부족한가?" style="rhombus;whiteSpace=wrap;html=1;fontSize=12;" parent="bd2LcZ9f1zMk1PiTSFTj-1" vertex="1">
+          <mxGeometry x="40" y="940" width="200" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="noQg9hEuoWINXBPe87Qg-11" value="전구가 꺼져있나?" style="rhombus;whiteSpace=wrap;html=1;fontSize=12;" parent="bd2LcZ9f1zMk1PiTSFTj-1" vertex="1">
+          <mxGeometry x="280" y="940" width="200" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="8JAIQUbyW3sRMqgmR5K7-1" value="전구 켜기" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;" vertex="1" parent="bd2LcZ9f1zMk1PiTSFTj-1">
+          <mxGeometry x="520" y="940" width="200" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="8JAIQUbyW3sRMqgmR5K7-2" value="전구 밝기 증가" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;" vertex="1" parent="bd2LcZ9f1zMk1PiTSFTj-1">
+          <mxGeometry x="280" y="1060" width="200" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="8JAIQUbyW3sRMqgmR5K7-3" value="현재 전구 색이 &lt;br&gt;LightSetting&lt;br&gt;객체의 값과 다른가?" style="rhombus;whiteSpace=wrap;html=1;fontSize=12;" vertex="1" parent="bd2LcZ9f1zMk1PiTSFTj-1">
+          <mxGeometry x="40" y="1220" width="200" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="8JAIQUbyW3sRMqgmR5K7-4" value="전구 색상 변경" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;" vertex="1" parent="bd2LcZ9f1zMk1PiTSFTj-1">
+          <mxGeometry x="280" y="1220" width="200" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="8JAIQUbyW3sRMqgmR5K7-5" value="현재 전구 색이 &lt;br&gt;LightSetting&lt;br&gt;객체의 값과 다른가?" style="rhombus;whiteSpace=wrap;html=1;fontSize=12;" vertex="1" parent="bd2LcZ9f1zMk1PiTSFTj-1">
+          <mxGeometry x="40" y="1340" width="200" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="bd2LcZ9f1zMk1PiTSFTj-2" value="main.py" style="swimlane;fontSize=16;startSize=40;" parent="1" vertex="1">
+          <mxGeometry x="40" y="70" width="760" height="1690" as="geometry">
+            <mxRectangle x="40" y="70" width="90" height="40" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
