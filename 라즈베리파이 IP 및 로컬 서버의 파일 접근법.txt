@@ -7,3 +7,4 @@ systemctl status apache2
 systemctl restart apache2로 재작동 가능
 
 cgi 파일 경로 : /var/www/cgi-bin
+JSON 파일 경로 : /var/www/html/
