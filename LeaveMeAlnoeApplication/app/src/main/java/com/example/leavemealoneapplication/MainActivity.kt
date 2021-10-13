@@ -2,23 +2,16 @@ package com.example.leavemealoneapplication
 
 import android.content.Context
 import android.content.Intent
-import android.content.SharedPreferences
 import android.os.Bundle
-import android.os.Handler
-import android.os.Looper
-import android.util.JsonReader
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import com.example.leavemealoneapplication.databinding.ActivityMainBinding
 import kotlinx.coroutines.*
 import org.json.JSONObject
 import java.io.BufferedReader
-import java.io.InputStream
 import java.io.InputStreamReader
-import java.lang.StringBuilder
 import java.net.HttpURLConnection
 import java.net.URL
-import kotlin.concurrent.thread
 
 
 class MainActivity : AppCompatActivity() {
@@ -43,8 +36,8 @@ class MainActivity : AppCompatActivity() {
         CoroutineScope(Dispatchers.IO).launch {
             while (true) {
                 if (isWiFiAvailable(applicationContext)) {
-                    var lightUrlText = "http://192.168.219.110/lightSetting.json"
-                    var waterUrlText = "http://192.168.219.110/waterSetting.json"
+                    var lightUrlText = "http://192.168.0.34/lightSetting.json"
+                    var waterUrlText = "http://192.168.0.34/waterSetting.json"
 
                     var lightUrl = URL(lightUrlText)
                     var waterUrl = URL(waterUrlText)
@@ -65,19 +58,40 @@ class MainActivity : AppCompatActivity() {
 
                     var lightInputStream = lightUrlConnection.getInputStream()
                     var lightBuffered = BufferedReader(InputStreamReader(lightInputStream, "UTF-8"))
-                    var lightContent = lightBuffered.readText()
+                    var lightContent = StringBuilder()
+
+                    try {
+                        var line = lightBuffered.readLine()
+                        while(line != null){
+                            lightContent.append(line)
+                            line = lightBuffered.readLine()
+                        }
+                    } finally {
+                        lightBuffered.close()
+                    }
 
                     var waterInputStream = waterUrlConnection.getInputStream()
-                    var waterBuffered = BufferedReader(InputStreamReader(waterInputStream, "UTF=8"))
-                    var waterContent = waterBuffered.readText()
+                    var waterBuffered = BufferedReader(InputStreamReader(waterInputStream, "UTF-8"))
+                    var waterContent = StringBuilder()
+
+                    try {
+                        var line = waterBuffered.readLine()
+                        while(line != null){
+                            waterContent.append(line)
+                            line = waterBuffered.readLine()
+                        }
+                    } finally {
+                        waterBuffered.close()
+                    }
 
                     Log.d("lightResponse", "Size: " + lightContent.length)
                     Log.d("waterResponse", "Size: " + waterContent.length)
-                    //Log.d("content", "${lightContent}")
+                    Log.d("content", "${lightContent}")
 
-                    fun safeLightCall(lightContent: String?): String? {
-                        if ((lightContent != null) && (lightContent.length !== 0)) {
-                            var lightJson = JSONObject(lightContent)
+                    fun safeLightCall(lightContent: StringBuilder): String? {
+                        var string = lightContent.toString()
+                        if ((string != null) && (string.isNotEmpty())) {
+                            var lightJson = JSONObject(string)
                             var currentLux = "${lightJson.get("currentLux")}"
                             return currentLux
                         } else {
@@ -92,9 +106,10 @@ class MainActivity : AppCompatActivity() {
                         currentLuxMessage = "현재 조도 : " + currentLux + " Lux"
                     }
 
-                    fun safeWaterCall(waterContent: String?): String? {
-                        if ((waterContent != null) && (waterContent.length != 0)) {
-                            var waterJson = JSONObject(waterContent)
+                    fun safeWaterCall(waterContent: StringBuilder): String? {
+                        var string = waterContent.toString()
+                        if ((string != null) && (string.isNotEmpty())) {
+                            var waterJson = JSONObject(string)
                             var humidity = "${waterJson.get("humidity")}"
                             return humidity
                         } else {
