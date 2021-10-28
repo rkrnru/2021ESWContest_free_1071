@@ -23,6 +23,7 @@ class GetUsername:
 
         payload = {'devicetype':'my_hue_app#iphone peter'}
         response = requests.post(URL, json=payload)
+        #post 방식으로 메시지 전송. post 방식은 payload를 만든 뒤 보낼 때, 이를 지정해서 보냄.
 
         print('브릿지에 보낸 메시지 : ', payload)
         #print('돌아온 응답 코드 : 'responce.status_code)
@@ -33,16 +34,20 @@ class GetUsername:
             
         if response.text.find('username') != -1:
             locationOfUsername = response.text.find('username')
+            #Dictionary에서 username 항목 찾기
+            
             #print('\'username\'의 시작 위치 :',locationOfUsername)
             #print('\'username\' 출력 시도 :', response.text[locationOfUsername:locationOfUsername+8])
             locationOfUsername += 11
             #print('username 내용의 시작 위치 :',locationOfUsername)
             #print('username 내용 출력 시도 :', response.text[locationOfUsername:-4])
             username = response.text[locationOfUsername:-4]
+            #인덱스 이용해서 username 부분만 추출하기.
             print()
             print('username :',username)
             return username
 
+        #상기 코드와 동일한 기능.
     @staticmethod
     def GetUsername2(IP):
         print()
