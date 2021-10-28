@@ -1,3 +1,5 @@
+#bh1750 센서를 이용하는 코드. 아래 코드는 테스트 코드이며, 내가 조금 수치만 수정해서 돌려보았다. 그리고 이거 가져다가
+#measureLux 만들었다.
 #!/usr/bin/python
 #---------------------------------------------------------------------
 #    ___  ___  _ ____
@@ -57,6 +59,11 @@ def convertToNumber(data):
 def readLight(addr=DEVICE):
   # Read data from I2C interface
   data = bus.read_i2c_block_data(addr,ONE_TIME_HIGH_RES_MODE_1,2)
+  
+  #read_i2c_blocak_data는 데이터를 1개의 블록(여기서는 list로 처리)로 읽어온다.
+  #첫 parameter는 i2c address, 두번째 것은 데이터를 가져올 register 주소인데, 여기서는 정확도 별로 register를 골라쓴다.
+  #세번째 것은 읽어올 block의 길이다. 여기서는 2byte를 읽어온다. 반환되는 데이터는 byte로 된 리스트이다.
+  
   return convertToNumber(data)
 
 def main():
