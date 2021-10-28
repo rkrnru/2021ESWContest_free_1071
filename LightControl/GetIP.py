@@ -25,6 +25,8 @@ class GetIP:
         try:
             while True:
                 data, addr = s.recvfrom(65507)
+                #65507 bytes 읽어오기
+                
                 data = data.decode('ascii')
                 data = data.replace('\r','')
                 data = data.rstrip('\n')
@@ -52,7 +54,9 @@ class GetIP:
 
             if r.status_code == 200:
                 locationOfInternalipaddress = r.text.find('internalipaddress')
+                #딕셔너리에서 internalipaddress 항목을 저장
                 GetIP.ip = r.text[locationOfInternalipaddress+20:-4]
+                #20번째 인덱스에서 뒤에서 -4번재까지 ip number이다.
 
                 print(r.text)
                 print('N-UPnP로 찾은 ip 주소 :',GetIP.ip)
