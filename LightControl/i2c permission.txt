@@ -1,3 +1,5 @@
+이 문서도 I2C 사용을 위한 권한 설정에 대한 글이다.
+
 I2C Device Permissions
 ddcutil requires read/write access to /dev/i2c devices, or more precisely all /dev/i2c devices associated with video cards.
 
