@@ -1,3 +1,5 @@
+# 조명 제어를 위해 만든 테스트 코드다. 실제로 재배기 쓸 때, 쓰지는 않는다.
+
 import sys
 import LightControl
 import measureLux
