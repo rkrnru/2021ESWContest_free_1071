@@ -1,3 +1,6 @@
+혹시나 i2c 사용이 불가능할 때, 라즈베리파이에서 권한 허가 하는 것.
+아래 내용은 어딘가에서 발췌한 Q&A다.
+
 Ok, now were are sorted! And permissions is the problem. A quick fix is to change the permissions of /dev/i2c-1  or /dev/i2c-0  (depends on rpi model) with the command:
 
 sudo chmod a+rw /dev/i2c-*
