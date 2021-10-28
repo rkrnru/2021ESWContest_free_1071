@@ -66,6 +66,10 @@ class MeasureLux():
     self.bus = SMBus(1)  # Rev 2 Pi uses 1
     addr=self.DEVICE
     data = self.bus.read_i2c_block_data(addr,self.ONE_TIME_HIGH_RES_MODE_1,2)
+    #read_i2c_blocak_data는 데이터를 1개의 블록(여기서는 list로 처리)로 읽어온다.
+    #첫 parameter는 i2c address, 두번째 것은 데이터를 가져올 register 주소인데, 여기서는 정확도 별로 register를 골라쓴다.
+    #세번째 것은 읽어올 block의 길이다. 여기서는 2byte를 읽어온다. 반환되는 데이터는 byte로 된 리스트이다.
+    
     return self.convertToNumber(data)
 
   def measureLux(self):
