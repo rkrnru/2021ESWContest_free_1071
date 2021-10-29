@@ -13,8 +13,13 @@ import java.net.URL
 
 class LightManagement : AppCompatActivity() {
     val binding by lazy { ActivityLightManagementBinding.inflate(layoutInflater) }
+    //조명 메뉴 xml 파일인, ActivityLightManagement를 inflate(메모리에 객체화 해서 올리기)
+    //그러고 바인딩 하는데, 바인딩은 늦은 초기화 이용. 바인딩이 실제 쓰이는 순간에 초기화된다.
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        // Activity의 이전 상태가 포함된 Bundle 타입 객체를 이용해, Activity 생성
+        // savedInstance는 Activity의 이전 상태를 저장한다. Bundle은 Map 형태로
+        // 이루어진 데이터 묶음인데, 상태 저장이나 복구에 사용한다.
         setContentView(binding.root)
 
         var sharedLight = getSharedPreferences("lightSetting", Context.MODE_PRIVATE)
@@ -31,6 +36,8 @@ class LightManagement : AppCompatActivity() {
             var lightInputStream = lightUrlConnection.getInputStream()
             var lightBuffered = BufferedReader(InputStreamReader(lightInputStream, "UTF-8"))
             var lightContent = lightBuffered.readText()
+            // MainActivity에서랑 유사하게, 데이터 받아오기. 이곳에서는 Buffer에서 텍스트 꺼낼 때,
+            // readText() 썼음.
 
             Log.d("lightResponse", "Size: " + lightContent.length)
 
@@ -49,6 +56,7 @@ class LightManagement : AppCompatActivity() {
                     var allowingOfAUser = "${lightJson.get("allowingOfAUser")}"
                     lightEditor.putString("allowingOfAUser", "${allowingOfAUser}")
                     lightEditor.apply()
+                    // 가져온 데이터를 sharedPreference에 저장.
 
                     break
                 } else {
@@ -58,15 +66,22 @@ class LightManagement : AppCompatActivity() {
                     lightInputStream = lightUrlConnection.getInputStream()
                     lightBuffered = BufferedReader(InputStreamReader(lightInputStream, "UTF-8"))
                     lightContent = lightBuffered.readText()
+                    // 서버에서 데이터 가져왔으나, 내용이 비어있으면 그냥 아무것도 안함.
                 }
             }
 
             var goalLux = sharedLight.getString("goalLux", "0")
             var chlorophyll = sharedLight.getString("chlorophyll", "A")
             var allowingOfAUser = sharedLight.getString("allowingOfAUser", "true")
+            // 사용할 변수 초기화한 것. 근데 어차피 나중에 쓰일 때는,
+            // 초기화 값 대신 sharedPreference 값이 들어가게 된다.
 
             withContext(Dispatchers.Main) {
+                // UI 다루는 부분이라, Dispatcher을 main으로 바꿨음.
+                // 코루틴에서 Dispatcher를 Main으로 바꾸면, UI 스레드가 이를 처리한다.
+
                 binding.currentLuxGoalText.text = "${goalLux}" + " Lux"
+
 
                 if (chlorophyll == "A") {
                     binding.chlorophyllBButton.selectButton(binding.less.id)
