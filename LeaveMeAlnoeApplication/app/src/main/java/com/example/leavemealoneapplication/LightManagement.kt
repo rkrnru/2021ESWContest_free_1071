@@ -15,6 +15,7 @@ class LightManagement : AppCompatActivity() {
     val binding by lazy { ActivityLightManagementBinding.inflate(layoutInflater) }
     //조명 메뉴 xml 파일인, ActivityLightManagement를 inflate(메모리에 객체화 해서 올리기)
     //그러고 바인딩 하는데, 바인딩은 늦은 초기화 이용. 바인딩이 실제 쓰이는 순간에 초기화된다.
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         // Activity의 이전 상태가 포함된 Bundle 타입 객체를 이용해, Activity 생성
@@ -66,15 +67,19 @@ class LightManagement : AppCompatActivity() {
                     lightInputStream = lightUrlConnection.getInputStream()
                     lightBuffered = BufferedReader(InputStreamReader(lightInputStream, "UTF-8"))
                     lightContent = lightBuffered.readText()
-                    // 서버에서 데이터 가져왔으나, 내용이 비어있으면 그냥 아무것도 안함.
+                    // 서버에서 데이터 가져왔으나, 내용이 비어있으면 연결 종료.
+                    // 좌측 변수에 저장하는 값은 이후에 쓰이지 않는다.
                 }
             }
 
             var goalLux = sharedLight.getString("goalLux", "0")
             var chlorophyll = sharedLight.getString("chlorophyll", "A")
             var allowingOfAUser = sharedLight.getString("allowingOfAUser", "true")
-            // 사용할 변수 초기화한 것. 근데 어차피 나중에 쓰일 때는,
-            // 초기화 값 대신 sharedPreference 값이 들어가게 된다.
+            // 사용할 변수 초기화한 것. getString() 안에 들어가는 첫번째 값은
+            // 값을 가져올 때 쓸 key이다. 2번째 값은 preference가
+            // 존재하지 않을 시에 key-value retrieve가 불가능하므로,
+            // 좌측 변수에 대신 들어갈 defualt 값이다. 우리 코드에서
+            // 실제로 쓰이는 일은 없다.
 
             withContext(Dispatchers.Main) {
                 // UI 다루는 부분이라, Dispatcher을 main으로 바꿨음.
