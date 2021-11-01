@@ -17,8 +17,12 @@ class Communication : AppCompatActivity() {
 
     //lateinit var networkConnectionStateMonitor: NetworkConnectionStateMonitor
     lateinit var button: Button
+    // lateinit은 속성(property), 즉 클래스 안의 변수를 선언 시 초기화하지 않아도 되게 한다.
+    // 버튼 하나 만들기
 
     lateinit var networkConnectionStateMonitor: NetworkConnectionStateMonitor
+    // NetworkConnectionStateMonitor라는 클래스로 객체 1개 생성.
+    // 그리고 lateinit.
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
