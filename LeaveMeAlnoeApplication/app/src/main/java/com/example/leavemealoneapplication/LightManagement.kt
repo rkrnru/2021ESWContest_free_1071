@@ -83,6 +83,7 @@ class LightManagement : AppCompatActivity() {
                 binding.currentLuxGoalText.text = "${goalLux}" + " Lux"
 
 
+                // 버튼 선택 시 UI 모양 바뀌는 것 처리.
                 if (chlorophyll == "A") {
                     binding.chlorophyllBButton.selectButton(binding.less.id)
                 } else if (chlorophyll == "B") {
@@ -108,6 +109,7 @@ class LightManagement : AppCompatActivity() {
                 Log.d("lightUpdate", "goalLux : " + "${binding.editGoalLux.text.toString()}")
             }
 
+            // 선택된 버튼에 따라 sharedPreference에 데이터 저장.
             if (binding.less.isSelected == true) {
                 lightEditor.putString("chlorophyll", "A")
                 lightEditor.apply()
@@ -142,6 +144,7 @@ class LightManagement : AppCompatActivity() {
                 var chlorophyll = sharedLight.getString("chlorophyll", "A")
                 var allowingOfAUser = sharedLight.getString("allowingOfAUser", "true")
 
+                //URL의 query parameter에 데이터 담아서 전송
                 var lightUrlText = "http://192.168.219.110/cgi-bin/light.py?goalLux=" +
                         "${goalLux}" + "&chlorophyll=" + "${chlorophyll}" + "&allowingOfAUser=" +
                         "${allowingOfAUser}"
